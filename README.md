@@ -1,18 +1,18 @@
-### Arkadaşlar tüm detaylar mailinizde var onun için açıklama yapmadan kuruluma geçiyorum:
+### Friends, all the details are in your e-mail, so I'm moving on to the installation without explanation:
 
 #
 
-### Donanım:
-> Şu an pek bir donanıma ihtiyaç yok sadece başvuruyoruz ama yinede kendi donanımım:
+### Equipment:
+> We don't need much equipment right now, we're just applying, but here's my own equipment:
 
-> 4 CPU 8 RAM Ubuntu 22.04 - [Hetzner](https://t.me/RuesAnnouncement/2114) 
+> 4 CPU 8 RAM Ubuntu 22.04 
 
 #
 
-### Kurulum
+### Setup
 
 ```console
-# güncelleme ve docker kurulumu
+# update and docker installation
 sudo apt update -y && sudo apt upgrade -y
 for pkg in docker.io docker-doc docker-compose podman-docker containerd runc; do sudo apt-get remove $pkg; done
 
@@ -34,7 +34,7 @@ sudo docker run hello-world
 ```
 
 ```console
-# gerekli yapılandırmalar:
+# required configurations:
 sudo mkdir -p /opt/sanchain/readonly
 cd /opt/sanchain/readonly
 
@@ -48,11 +48,10 @@ sudo ln -s docker-compose-readonly.yml docker-compose.yml
 sudo docker compose up -d
 ```
 
-> Kurulum başarılı olunca [buradan](https://nodes.sanr.network/) başvuruyoruz
+> When the installation is successful, we apply [here](https://nodes.sanr.network/)
 
 ![image](https://github.com/ruesandora/santiment/assets/101149671/96d60c17-eb2a-4a18-8cd0-4a9a1f1e23da)
 
-> Sorun yaşarsanız VPN olabilir ama yinede önermem mobil veri vs. daha mantıklı.
-
+> If you have problems, you can use VPN, but I still wouldn't give it mobile data etc. more logical.
 
 
